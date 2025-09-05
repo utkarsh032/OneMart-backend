@@ -178,3 +178,33 @@ This section covers the Cart functionality: adding items, removing items, and fe
 ### **3️⃣ Get Cart for User**
 
 `GET /api/cart`
+
+## 💖 Wishlist API
+
+This section covers the Wishlist functionality: adding items, removing items, and fetching the wishlist for a user.  
+**All routes require authentication via JWT token.**
+
+---
+
+### **1️⃣ Add Item to Wishlist**
+
+**Endpoint:**  
+`POST /api/wishlist/add`
+
+**Headers:**
+
+```json
+{
+  "productId": "64f1a5b3c2a1f9e8d1234568"
+}
+```
+
+### **2️⃣ Remove Item from Wishlist**
+
+**Endpoint:**
+`POST /api/wishlist/remove`
+
+### **3️⃣ Get Wishlist for User**
+
+**Endpoint:**
+`GET /api/wishlist`
