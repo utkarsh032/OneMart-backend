@@ -208,3 +208,37 @@ This section covers the Wishlist functionality: adding items, removing items, an
 
 **Endpoint:**
 `GET /api/wishlist`
+
+## 💳 Transaction / Payment API
+
+This section covers payment creation and updating payment status.  
+**All routes require authentication via JWT token.**
+
+---
+
+### **1️⃣ Create a Payment**
+
+**Endpoint:**  
+`POST /api/transaction/`
+
+```json
+{
+  "orderId": "64f1a5b3c2a1f9e8d1234567",
+  "userId": "64f1a5b3c2a1f9e8d1234568",
+  "amount": 1899.48,
+  "paymentMethod": "upi"
+}
+```
+
+### **2️⃣ Update Payment Status**
+
+**Endpoint:**
+
+`PUT /api/transaction/:id/status`
+
+```json
+{
+  "paymentStatus": "completed",
+  "transactionId": "TXN12345UPI67890"
+}
+```
