@@ -143,3 +143,38 @@ This section covers all product-related endpoints.
 
 **Endpoint:**
 `PUT /api/orders/:id/status`
+
+## 🛒 Cart API
+
+This section covers the Cart functionality: adding items, removing items, and fetching the cart for a user. All routes require authentication.
+
+---
+
+### **1️⃣ Add Item to Cart**
+
+**Endpoint:**  
+`POST /api/cart/add`
+
+**Headers:**
+
+```json
+{
+  "productId": "64f1a5b3c2a1f9e8d1234568",
+  "quantity": 2,
+  "priceAtAdd": 499.99
+}
+```
+
+### **2️⃣ Remove Item from Cart**
+
+`POST /api/cart/remove`
+
+```json
+{
+  "productId": "64f1a5b3c2a1f9e8d1234568"
+}
+```
+
+### **3️⃣ Get Cart for User**
+
+`GET /api/cart`
