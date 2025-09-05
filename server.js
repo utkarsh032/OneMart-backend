@@ -5,6 +5,7 @@ import authRouter from './API/Routers/authRoutes.js'
 import productRouter from './API/Routers/productRoutes.js'
 import orderRouter from './API/Routers/orderRoutes.js'
 import cartRouter from './API/Routers/cartRouter.js'
+import wishlistRouter from './API/Routers/wishlistRoutes.js'
 
 const PORT = process.env.PORT || 3000
 
@@ -16,6 +17,7 @@ app.use('/api/auth', authRouter)
 app.use('/api/product', productRouter)
 app.use('/api', orderRouter)
 app.use('/api/cart', cartRouter)
+app.use('/api/wishlist', wishlistRouter)
 
 // Database Connection
 dbConnection()
