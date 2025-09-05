@@ -77,3 +77,69 @@ This section covers all product-related endpoints.
 
 **Endpoint:**
 `DELETE /api/product/:id`
+
+## 🛒 Order API
+
+| Method | Endpoint                 | Description                          |
+| ------ | ------------------------ | ------------------------------------ |
+| POST   | `/api/orders`            | Create a new order                   |
+| GET    | `/api/orders/my`         | Get all orders of the logged-in user |
+| GET    | `/api/orders/:id`        | Get order details by order ID        |
+| PUT    | `/api/orders/:id/pay`    | Mark an order as paid                |
+| PUT    | `/api/orders/:id/status` | Update the status of an order        |
+
+> 🔒 **Note:** All routes require authentication (`protect` middleware).
+
+---
+
+### **1️⃣ Create Order**
+
+**Endpoint:**  
+`POST /api/orders`
+
+**Request Body Example:**
+
+```json
+{
+  "orderItems": [
+    {
+      "product": "64f1a5b3c2a1f9e8d1234568",
+      "qty": 2,
+      "price": 499
+    },
+    {
+      "product": "64f1a5b3c2a1f9e8d1234569",
+      "qty": 1,
+      "price": 899
+    }
+  ],
+  "shippingAddress": {
+    "address": "123 MG Road",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "postalCode": "400001",
+    "country": "India"
+  },
+  "totalAmount": 1897
+}
+```
+
+### **2️⃣ Get Logged-in User Orders**
+
+**Endpoint:**
+`GET /api/orders/my`
+
+### **3️⃣ Get Order By ID**
+
+**Endpoint:**
+`GET /api/orders/:id`
+
+### **4️⃣ Mark Order As Paid**
+
+**Endpoint:**
+`PUT /api/orders/:id/pay`
+
+## **5️⃣ Update Order Status**
+
+**Endpoint:**
+`PUT /api/orders/:id/status`
