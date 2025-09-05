@@ -242,3 +242,33 @@ This section covers payment creation and updating payment status.
   "transactionId": "TXN12345UPI67890"
 }
 ```
+
+## 📊 Analytics API
+
+This section provides **admin-only analytics** to track sales, revenue, and customer performance.  
+⚠️ **Note:** All routes require authentication (`JWT token`) and admin-level access.
+
+---
+
+### **1️⃣ Sales Summary**
+
+**Endpoint:**  
+`GET /api/analytics/summary`
+
+### **2️⃣ Monthly Revenue**
+
+**Endpoint:**
+
+`GET /api/analytics/sales/monthly`
+
+### **3️⃣ Top Products**
+
+**Endpoint:**
+
+`GET /api/analytics/top-products`
+
+### **4️⃣ Top Customers**
+
+**Endpoint:**
+
+`GET /api/analytics/top-customers`
