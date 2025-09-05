@@ -11,10 +11,10 @@ import {
 
 const orderRouter = express.Router()
 
-orderRouter.post('/orders', protect, createOrder)
-orderRouter.get('/orders/my', protect, getUserOrders)
-orderRouter.get('/orders/:id', protect, getOrderById)
-orderRouter.put('/orders/:id/pay', protect, markOrderAsPaid)
-orderRouter.put('/orders/:id/status', protect, updatedOrderStatus)
+orderRouter.post('/', protect, createOrder)
+orderRouter.get('/my', protect, getUserOrders)
+orderRouter.get('/:id', protect, getOrderById)
+orderRouter.put('/:id/pay', protect, markOrderAsPaid)
+orderRouter.put('/:id/status', protect, updatedOrderStatus)
 
 export default orderRouter
