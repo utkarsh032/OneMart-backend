@@ -272,3 +272,34 @@ This section provides **admin-only analytics** to track sales, revenue, and cust
 **Endpoint:**
 
 `GET /api/analytics/top-customers`
+
+## Vendor Features
+
+### **1️⃣ Register as Vendor**
+
+**Endpoint:**
+`POST /api/vendors/register`
+
+```json
+{
+  "businessName": "Soni Electronics",
+  "businessEmail": "vendor@example.com",
+  "businessPhone": "9876543210",
+  "address": "Delhi, India"
+}
+```
+
+### **2️⃣ Get My Vendor Profile**
+
+**Endpoint:**
+`GET /api/vendors/me`
+
+### **3️⃣ Get All Vendors (Admin Only)**
+
+**Endpoint:**
+`GET /api/vendors`
+
+### **4️⃣ Update Vendor Status (Admin Only)**
+
+**Endpoint:**
+`PATCH /api/vendors/:id/status`

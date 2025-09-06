@@ -10,6 +10,7 @@ import cartRouter from './API/Routers/cartRouter.js'
 import wishlistRouter from './API/Routers/wishlistRoutes.js'
 import transactionRouter from './API/Routers/transactionRoutes.js'
 import analyticsRouter from './API/Routers/AdminRoutes/analyticsRoutes.js'
+import vendorRouter from './API/Routers/VendorRoutes/vendorRoutes.js'
 
 const PORT = process.env.PORT || 3000
 
@@ -32,6 +33,7 @@ app.use('/api/cart', cartRouter)
 app.use('/api/wishlist', wishlistRouter)
 app.use('/api/transaction', transactionRouter)
 app.use('/api/analytics', analyticsRouter)
+app.use('/api/vendors', vendorRouter)
 
 // Error Handling Middleware
 app.use((err, req, res, next) => {
